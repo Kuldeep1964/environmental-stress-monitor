@@ -165,6 +165,21 @@ def init_db():
 def dashboard():
     return render_template('dashboard.html')
 
+# -----------------------------
+# Page Routes
+# -----------------------------
+@app.route('/analytics')
+def analytics():
+    return render_template('analytics.html')
+
+@app.route('/history-page')
+def history_page():
+    return render_template('history.html')
+
+@app.route('/settings')
+def settings():
+    return render_template('settings.html')
+
 @app.route('/update', methods=['POST'])
 def update_sensor():
     global sensor_data
